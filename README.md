@@ -1,5 +1,19 @@
 # Limma Differential Expression
 
+
+## Installation
+
+**[⬇️ Click here to install in Cauldron](http://localhost:50060/install?repo=https%3A%2F%2Fgithub.com%2Fnoatgnu%2Flimma-plugin)** _(requires Cauldron to be running)_
+
+> **Repository**: `https://github.com/noatgnu/limma-plugin`
+
+**Manual installation:**
+
+1. Open Cauldron
+2. Go to **Plugins** → **Install from Repository**
+3. Paste: `https://github.com/noatgnu/limma-plugin`
+4. Click **Install**
+
 **ID**: `limma`  
 **Version**: 1.0.0  
 **Category**: analysis  
@@ -13,7 +27,7 @@ Linear models for differential expression analysis using limma
 
 - **Environments**: `r`
 
-- **Script**: `limma.R`
+- **Entrypoint**: `limma.R`
 
 ## Inputs
 
@@ -103,6 +117,7 @@ Dependencies are defined in: `r-packages.txt`
 - `QFeatures`
 - `limma`
 - `MsCoreUtils`
+- `impute`
 
 > **Note**: When you create a custom environment for this plugin, these dependencies will be automatically installed.
 
@@ -111,11 +126,11 @@ Dependencies are defined in: `r-packages.txt`
 This plugin includes example data for testing:
 
 ```yaml
-  input_file: diann/imputed.data.txt
-  annotation_file: differential_analysis/annotation.txt
   comparisons: differential_analysis/comparison.bca.txt
   index_col: Protein.Ids
   log2: true
+  input_file: diann/imputed.data.txt
+  annotation_file: differential_analysis/annotation.txt
 ```
 
 Load example data by clicking the **Load Example** button in the UI.
